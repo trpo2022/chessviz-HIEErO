@@ -1,9 +1,8 @@
-//#include <libchessviz/chess.h>
+#include <libchessviz/chess.h>
 #include <stdio.h>
 #include <stdlib.h>
 #define n 9
 #define str 18
-#include "chess.h"
 
 int main()
 {
