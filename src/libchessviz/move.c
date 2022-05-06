@@ -6,8 +6,10 @@ int move(int* from_, int* to_, int fl, char board[n][n])
     char input_string[str];
     scanf("%s", input_string);
 
-    if (input_string[0] == '1' || input_string[0] == '2' || input_string[0] == '3' || input_string[0] == '4'
-        || input_string[0] == '5' || input_string[0] == '6' || input_string[0] == '7' || input_string[0] == '8'
+    if (input_string[0] == '1' || input_string[0] == '2'
+        || input_string[0] == '3' || input_string[0] == '4'
+        || input_string[0] == '5' || input_string[0] == '6'
+        || input_string[0] == '7' || input_string[0] == '8'
         || input_string[0] == '9') {
         return -1;
     }
@@ -15,7 +17,8 @@ int move(int* from_, int* to_, int fl, char board[n][n])
         char first_part[2];
         char last_part[2];
 
-        if (input_string[i] == 'K' || input_string[i] == 'Q' || input_string[i] == 'B' || input_string[i] == 'R'
+        if (input_string[i] == 'K' || input_string[i] == 'Q'
+            || input_string[i] == 'B' || input_string[i] == 'R'
             || input_string[i] == 'N') {
             i++;
             if (input_string[i] != '-') {
@@ -46,8 +49,7 @@ int move(int* from_, int* to_, int fl, char board[n][n])
         }
     }
 
-    if (to_[0] != 8 && from_[0] != 8 && to_[1] != 0 && from_[1] != 0) 
-	{
+    if (to_[0] != 8 && from_[0] != 8 && to_[1] != 0 && from_[1] != 0) {
         board[to_[0]][to_[1]] = board[from_[0]][from_[1]];
         board[from_[0]][from_[1]] = ' ';
     } else {
